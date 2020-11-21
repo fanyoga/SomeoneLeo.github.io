@@ -1,0 +1,11 @@
+这篇blog是主要关于Mysql的改（update）方法的学习（萌新的变强之路）
+基本语句如下
+update 表名 set 列名=(你要变更的值) 后面你还是可以接where来判定位置啥的
+当然这只是我目前碰到的简单的例子
+以下的代码是我在做leetcode————627题发现的宝藏固定用法case...when
+update salary 
+set 
+sex=case sex
+when 'm' then 'f'
+else 'm'
+end
