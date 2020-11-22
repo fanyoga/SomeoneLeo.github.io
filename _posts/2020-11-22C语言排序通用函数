@@ -1,0 +1,17 @@
+int comp(const void*a,const void*b)//用来做比较的函数。
+{
+    return *(int*)a-*(int*)b;
+}
+const修饰的数据类型是指常类型，常类型的变量或对象的值是不能被更新的
+以上是配合qsort函数所要附带的必要函数
+头文件：stdlib.h
+原型： void qsort(void *base,int nelem,int width,int (*fcmp)(const void *,const void *));
+给出一个参考写法qsort(a,len_a,sizeof(int),comp)
+第一形参：需要排序的数组（指针）
+第二形参：数组的长度
+第三：数组中的元素占用存储空间（一般为sizeof（数据类型：诸如char ，int and stuff））
+第四：指向函数的指针，用于确定排序的顺序（默认为升序）
+
+##其中（int）类型可根据具体的数据类型更换成char or float等等
+
+该总结来源于leetcode.283
